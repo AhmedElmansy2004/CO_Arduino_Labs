@@ -5,8 +5,10 @@ int green_pin = 8;
 int red_pin = 7;
 int button_pin = 2;
 
+//state of the LEDs
 boolean green_state;
 
+//Debounce fix code
 boolean debounce(int pin) {
     boolean state;
     boolean previous_state;
@@ -22,17 +24,15 @@ boolean debounce(int pin) {
     return state;
 }
 
-void setup()
-{
-  Serial.begin(9600);
-  
+//setup for pins and their modes
+void setup() {
   pinMode(green_pin, OUTPUT);
   pinMode(red_pin, OUTPUT);
   pinMode(button_pin, INPUT_PULLUP);
 }
 
-void loop()
-{
+//main program loop
+void loop() {
   digitalWrite(green_pin, green_state);
   digitalWrite(red_pin, !green_state);
   
