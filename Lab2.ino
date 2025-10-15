@@ -1,5 +1,3 @@
-// C++ code
-
 //pin Variables
 int green_pin = 8;
 int red_pin = 7;
