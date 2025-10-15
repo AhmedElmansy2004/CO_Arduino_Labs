@@ -1,7 +1,8 @@
-int x, y;
-int idx;
-char inputstr[4];
-  
+int x, y; // variables to store the numbers to be added
+int idx;  // the index to navigate our input string
+char inputstr[4]; // the input string
+
+//The function to read the input
 int getNumber();
 
 void setup()
@@ -23,8 +24,8 @@ void loop()
   Serial.println(x+y);
 }
 
-int getNumber(){
 
+int getNumber(){
   idx = 0;
   while(idx < 4){
     if(Serial.available()){
@@ -33,5 +34,4 @@ int getNumber(){
     }
   }
   return atoi(inputstr);
-
 }

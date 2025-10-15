@@ -1,3 +1,7 @@
+/*
+@ x: the independant variable input for the function
+@ y: the dependant variable output for the function
+*/
 int x = 0, y;
 
 void setup()
@@ -8,7 +12,7 @@ void setup()
 void loop()
 {
   y = sin(x);
-  x++;
+  x += 0.1;
 
   Serial.println(y);
 
